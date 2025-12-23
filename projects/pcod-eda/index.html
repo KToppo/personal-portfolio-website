@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PCOD & PCOS Health Data Analysis | Kalyan Toppo</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="page-wrapper">
+
+<div class="page-content">
+
+<header class="navbar">
+    <h2 class="logo">KT</h2>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+        ☰
+    </button>
+    <nav class="nav-links">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('projects') }}">Projects</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+</header>
+
+<section class="about about-page animate">
+    <div class="about-container">
+
+        <h1>PCOD & PCOS Health Data Analysis</h1>
+
+        <p class="about-intro">
+            Exploring patterns responsibly — without crossing into diagnosis or medical claims.
+        </p>
+
+        <p>
+            This project was created to explore how data analysis can be used to understand
+            <span class="grayscale-bold">complex health conditions</span> without crossing into
+            unsafe or misleading conclusions.
+        </p>
+
+        <p>
+            PCOD and PCOS are widely discussed but often poorly understood, especially when
+            conversations rely on anecdotes instead of data. My goal was not to
+            <strong>“predict disease”</strong>, but to analyze patterns, correlations, and
+            lifestyle indicators present in real-world health data.
+        </p>
+
+        <p>
+            I approached this project with one clear boundary:
+            <span class="grayscale-bold">analysis for awareness and insight, not medical judgment</span>.
+        </p>
+
+        <!-- Project Image -->
+        <div class="project-image">
+            <img src="{{ url_for('static', filename='assets/projects/pcod_eda.png') }}"
+                 alt="PCOD PCOS Health Data Analysis Visualizations">
+            <p class="image-caption">
+                Exploratory visual analysis of health indicators related to PCOD and PCOS.
+            </p>
+        </div>
+
+        <hr class="section-divider">
+
+        <h2>How I Approached the Problem</h2>
+
+        <p>
+            The dataset contained multiple <span class="grayscale-bold">physiological and
+            lifestyle-related attributes</span> associated with women’s health.
+            Instead of treating it as a classification task, I focused on
+            <span class="grayscale-bold">Exploratory Data Analysis (EDA)</span> to answer
+            practical, responsible questions such as:
+        </p>
+
+        <ul class="project-list">
+            <li>How do health indicators vary between affected and non-affected groups?</li>
+            <li>Are certain patterns consistently associated with PCOD/PCOS?</li>
+            <li>Which features show stronger relationships, and which are mostly noise?</li>
+        </ul>
+
+        <p>
+            I began with careful <span class="grayscale-bold">data cleaning and validation</span>,
+            handling missing values, inconsistencies, and outliers — an especially important step
+            for health-related data where errors can mislead interpretation.
+        </p>
+
+        <p>
+            From there, I used visualizations and statistical summaries to explore:
+        </p>
+
+        <ul class="project-list">
+            <li>Hormonal and metabolic indicators</li>
+            <li>Body metrics and lifestyle variables</li>
+            <li>Distribution differences across groups</li>
+            <li>Correlations that may warrant deeper clinical investigation</li>
+        </ul>
+
+        <p>
+            At every step, the focus remained on
+            <span class="grayscale-bold">interpreting trends responsibly</span>,
+            not forcing conclusions.
+        </p>
+
+        <hr class="section-divider">
+
+        <h2>Key Insights and Observations</h2>
+
+        <p>
+            The analysis revealed that:
+        </p>
+
+        <ul class="project-list">
+            <li>Certain health indicators show noticeable distribution differences between groups</li>
+            <li>Some commonly assumed factors have weaker relationships than expected</li>
+            <li>A small subset of features consistently stands out across multiple views of the data</li>
+        </ul>
+
+        <p>
+            More importantly, the project highlighted how easily
+            <span class="grayscale-bold">misleading conclusions</span> can emerge if analysis is
+            not done carefully — reinforcing why EDA is critical before any modeling or inference.
+        </p>
+
+        <hr class="section-divider">
+
+        <h2>What This Project Actually Demonstrates</h2>
+
+        <ul class="project-list">
+            <li>Responsible handling of sensitive health data</li>
+            <li>Strong EDA skills applied to a real-world, high-impact domain</li>
+            <li>The ability to translate numerical patterns into human-understandable insights</li>
+            <li>Awareness of ethical boundaries in data science</li>
+        </ul>
+
+        <p>
+            It reflects a mindset that prioritizes
+            <span class="grayscale-bold">interpretation, caution, and clarity</span>
+            over flashy claims.
+        </p>
+
+        <hr class="section-divider">
+
+        <h2>Why This Project Matters in My Portfolio</h2>
+
+        <p>
+            Unlike recommendation systems or classifiers, this project required:
+        </p>
+
+        <ul class="project-list">
+            <li>Slower, more deliberate analysis</li>
+            <li>Ethical awareness</li>
+            <li>Clear communication without overclaiming</li>
+        </ul>
+
+        <p>
+            It strengthened my ability to work with real-world data where mistakes matter,
+            and where <span class="grayscale-bold">insight is more valuable than prediction</span>.
+        </p>
+
+        <p class="about-closing">
+            Health data is powerful — and dangerous if misused.
+            This project respects that reality.
+            It focuses on understanding patterns, raising the right questions,
+            and demonstrating analytical discipline — not pretending to replace medical expertise.
+        </p>
+
+        <a href="https://github.com/KToppo/Exploratory-Data-Analysis-EDA/tree/main/PCOS_Women_Health"
+           target="_blank"
+           class="about-btn">
+            View Project on GitHub →
+        </a>
+
+    </div>
+</section>
+
+</div>
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <div class="footer-left">
+            <p class="footer-name">
+                © 2025 Kalyan Toppo
+            </p>
+        </div>
+
+        <div class="footer-center">
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/kalyantoppo/"
+                   target="_blank"
+                   aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://www.instagram.com/sptrop/"
+                   target="_blank"
+                   aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="mailto:kalyan.toppo.2021@gmail.com"
+                   aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+                <a href="https://github.com/KToppo"
+                   target="_blank"
+                   aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <button class="back-to-top" aria-label="Back to top">
+                ↑ Top
+            </button>
+        </div>
+
+    </div>
+</footer>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

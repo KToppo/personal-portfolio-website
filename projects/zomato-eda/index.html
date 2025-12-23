@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zomato Data Analysis | Kalyan Toppo</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="page-wrapper">
+
+<div class="page-content">
+
+<header class="navbar">
+    <h2 class="logo">KT</h2>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+        ☰
+    </button>
+    <nav class="nav-links">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('projects') }}">Projects</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+</header>
+
+<section class="about about-page animate">
+    <div class="about-container">
+
+        <h1>Zomato Data Analysis</h1>
+
+        <p class="about-intro">
+            Understanding how a food-tech platform operates at scale — through data, not assumptions.
+        </p>
+
+        <p>
+            This project was created to understand how a large food-tech platform like
+            <span class="grayscale-bold">Zomato</span> operates across cities, cuisines,
+            and customer preferences — using data rather than intuition.
+        </p>
+
+        <p>
+            Instead of treating the dataset as a collection of restaurants, I approached it
+            as a <span class="grayscale-bold">business ecosystem</span> involving customers,
+            restaurants, locations, pricing, and ratings.
+        </p>
+
+        <p>
+            The objective was simple but important:
+            <strong>extract insights that explain platform behavior, not just summarize data.</strong>
+        </p>
+
+        <!-- Project Image -->
+        <div class="project-image">
+            <img src="{{ url_for('static', filename='assets/projects/zomato_eda.png') }}"
+                 alt="Zomato Data Analysis Visualizations">
+            <p class="image-caption">
+                Exploratory analysis of restaurant distribution, pricing, ratings,
+                and platform features across cities.
+            </p>
+        </div>
+
+        <hr class="section-divider">
+
+        <h2>How I Approached the Analysis</h2>
+
+        <p>
+            I split the project into two clear phases:
+            <span class="grayscale-bold">data cleaning</span> and
+            <span class="grayscale-bold">data exploration</span>.
+        </p>
+
+        <p>
+            The raw dataset contained inconsistencies, missing values, and mixed formats —
+            a realistic reflection of real-world business data. Cleaning was treated as a
+            first-class task, not a formality, ensuring that downstream insights were reliable.
+        </p>
+
+        <p>
+            Once the data was structured, I focused on exploratory analysis to answer
+            business-relevant questions such as:
+        </p>
+
+        <ul class="project-list">
+            <li>How does restaurant availability vary across cities?</li>
+            <li>Are higher ratings associated with higher pricing?</li>
+            <li>Which cuisines dominate different regions?</li>
+            <li>How do online delivery and table booking affect customer perception?</li>
+        </ul>
+
+        <p>
+            Rather than plotting everything, I filtered insights based on
+            <span class="grayscale-bold">decision relevance</span> — what would matter to
+            the platform, restaurant partners, or customers.
+        </p>
+
+        <hr class="section-divider">
+
+        <h2>Key Insights and Observations</h2>
+
+        <p>
+            The analysis highlighted several important patterns:
+        </p>
+
+        <ul class="project-list">
+            <li>Strong regional differences in cuisine dominance and pricing behavior</li>
+            <li>Cities with dense restaurant listings show higher competition and rating spread</li>
+            <li>Premium pricing does not always correlate with higher customer ratings</li>
+            <li>Online delivery and table booking features influence visibility and engagement</li>
+        </ul>
+
+        <p>
+            These insights help explain why platform strategies differ city by city,
+            and why <span class="grayscale-bold">blanket assumptions rarely work</span>
+            in marketplace businesses.
+        </p>
+
+        <hr class="section-divider">
+
+        <h2>What This Project Actually Demonstrates</h2>
+
+        <ul class="project-list">
+            <li>End-to-end EDA on a real-world marketplace dataset</li>
+            <li>The ability to clean and structure messy business data</li>
+            <li>Translating raw metrics into platform-level insights</li>
+            <li>Thinking in terms of stakeholders — customers, restaurants, and the platform</li>
+        </ul>
+
+        <p>
+            It also reinforced a key analytical habit:
+            <span class="grayscale-bold">good analysis prioritizes relevance over volume</span>.
+        </p>
+
+        <hr class="section-divider">
+
+        <h2>Why This Project Matters in My Portfolio</h2>
+
+        <p>
+            This project strengthened my ability to:
+        </p>
+
+        <ul class="project-list">
+            <li>Analyze consumer-facing platform data</li>
+            <li>Ask business-oriented questions</li>
+            <li>Communicate insights clearly without overclaiming</li>
+        </ul>
+
+        <p>
+            Alongside my financial and health EDA projects, it demonstrates versatility —
+            applying the same analytical discipline across very different domains.
+        </p>
+
+        <p class="about-closing">
+            This analysis doesn’t try to “optimize Zomato”.
+            It focuses on understanding how such platforms behave,
+            how customer preferences vary, and why data-driven decisions matter
+            in competitive marketplaces.
+            That understanding is the real value.
+        </p>
+
+        <a href="https://github.com/KToppo/Exploratory-Data-Analysis-EDA/tree/main/Zomato"
+           target="_blank"
+           class="about-btn">
+            View Project on GitHub →
+        </a>
+
+    </div>
+</section>
+
+</div>
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <div class="footer-left">
+            <p class="footer-name">
+                © 2025 Kalyan Toppo
+            </p>
+        </div>
+
+        <div class="footer-center">
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/kalyantoppo/"
+                   target="_blank"
+                   aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://www.instagram.com/sptrop/"
+                   target="_blank"
+                   aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="mailto:kalyan.toppo.2021@gmail.com"
+                   aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+                <a href="https://github.com/KToppo"
+                   target="_blank"
+                   aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <button class="back-to-top" aria-label="Back to top">
+                ↑ Top
+            </button>
+        </div>
+
+    </div>
+</footer>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects | Kalyan Toppo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="page-wrapper">
+<div class="page-content">
+
+<header class="navbar">
+    <h2 class="logo">KT</h2>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+        ☰
+    </button>
+    <nav class="nav-links">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('projects') }}" class="active">Projects</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+</header>
+
+<section class="projects projects-page animate">
+    <div class="projects-container">
+
+        <h1>Projects</h1>
+        <p class="projects-subtitle">
+            A focused collection of projects showcasing my work across
+            machine learning, data analysis, and exploratory research.
+        </p>
+
+        <div class="projects-grid">
+
+            <div class="project-card" data-link="{{ url_for('emotion_detection') }}">
+                <img src="{{ url_for('static', filename='assets/projects/emotion_detection.png') }}" alt="Emotion Detection">
+                <div class="project-content">
+                    <h3>Emotion Detection (Classical ML)</h3>
+                    <p>Facial emotion recognition using ensemble machine learning models.</p>
+                </div>
+            </div>
+
+            <div class="project-card" data-link="{{ url_for('spam_classifier') }}">
+                <img src="{{ url_for('static', filename='assets/projects/spam_classifier.png') }}" alt="Spam Classifier">
+                <div class="project-content">
+                    <h3>Spam Detection System</h3>
+                    <p>NLP-based spam classification using TF-IDF and Naive Bayes.</p>
+                </div>
+            </div>
+
+            <div class="project-card" data-link="{{ url_for('recommender_system') }}">
+                <img src="{{ url_for('static', filename='assets/projects/recommender.png') }}" alt="Recommender System">
+                <div class="project-content">
+                    <h3>Recommendation Systems</h3>
+                    <p>Content-based, popularity-based, and collaborative filtering systems.</p>
+                </div>
+            </div>
+
+            <div class="project-card" data-link="{{ url_for('tata_motors') }}">
+                <img src="{{ url_for('static', filename='assets/projects/tata_motors_eda.png') }}" alt="Tata Motors EDA">
+                <div class="project-content">
+                    <h3>Tata Motors Stock EDA</h3>
+                    <p>Exploratory analysis of financial time-series data.</p>
+                </div>
+            </div>
+
+            <div class="project-card" data-link="{{ url_for('pcod_eda') }}">
+                <img src="{{ url_for('static', filename='assets/projects/pcod_eda.png') }}" alt="PCOD PCOS EDA">
+                <div class="project-content">
+                    <h3>PCOD & PCOS Health EDA</h3>
+                    <p>Responsible analysis of health indicators and patterns.</p>
+                </div>
+            </div>
+
+            <div class="project-card" data-link="{{ url_for('zomato_eda') }}">
+                <img src="{{ url_for('static', filename='assets/projects/zomato_eda.png') }}" alt="Zomato EDA">
+                <div class="project-content">
+                    <h3>Zomato Data Analysis</h3>
+                    <p>Business-focused EDA on a food-tech platform dataset.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+</div>
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <div class="footer-left">
+            <p class="footer-name">
+                © 2025 Kalyan Toppo
+            </p>
+        </div>
+
+        <div class="footer-center">
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/kalyantoppo/"
+                   target="_blank"
+                   aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://www.instagram.com/sptrop/"
+                   target="_blank"
+                   aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="mailto:kalyan.toppo.2021@gmail.com"
+                   aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+                <a href="https://github.com/KToppo"
+                   target="_blank"
+                   aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <button class="back-to-top" aria-label="Back to top">
+                ↑ Top
+            </button>
+        </div>
+
+    </div>
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

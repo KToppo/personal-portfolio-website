@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About | Kalyan Toppo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="page-wrapper">
+<div class="page-content">
+
+<header class="navbar">
+    <h2 class="logo">KT</h2>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+        ☰
+    </button>
+    <nav class="nav-links">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('about') }}" class="active">About</a>
+        <a href="{{ url_for('projects') }}">Projects</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+</header>
+<section class="about about-page animate">
+    <div class="about-container">
+
+        <h1>About Me</h1>
+
+        <p class="about-intro">
+            My journey so far has been shaped by curiosity, discipline, and a very clear desire
+            to build something meaningful—for my family and for myself.
+        </p>
+
+        <p>
+            I completed my <span class="grayscale-bold">B.Com (Honours) in 2024</span>, but my interest never stayed
+            confined to textbooks or traditional career paths. During my studies, a case study
+            on <span class="grayscale-bold">Manyavar</span> introduced me to how simple data science tools were used
+            to scale a legacy business. That insight changed the way I looked at data. I realized
+            that behind strong decisions and sustainable growth, there is often a layer of
+            <span class="grayscale-bold">machine learning</span> quietly doing the heavy lifting.
+        </p>
+
+        <p>
+            Coming from a commerce background, stepping into machine learning wasn’t comfortable—or
+            obvious. But I’ve never been afraid of learning from scratch. After graduation, I
+            deliberately built my foundation in <span class="grayscale-bold">mathematics, statistics,
+            and algorithms</span>, and in <span class="grayscale-bold">2025</span>, I formally pursued a
+            <span class="grayscale-bold">Diploma in Data Science at IT-Vedant</span> to give structure
+            to my transition.
+        </p>
+
+        <p>
+            Today, I consider myself a <span class="grayscale-bold">machine learning enthusiast
+            at an early-career stage</span>, actively learning by building. I enjoy working across
+            the full data lifecycle—cleaning messy data, exploring patterns, engineering features,
+            training models, and evaluating them in ways that actually make sense for real-world use.
+            I’ve worked on datasets across <span class="grayscale-bold">food-tech, healthcare,
+            and finance</span>, and built practical projects like
+            <span class="grayscale-bold">recommendation systems, classifiers, and emotion detection models</span>
+            using Python, SQL, Excel, Power BI, and ML frameworks.
+        </p>
+
+        <p>
+            Interestingly, <span class="grayscale-bold">Python</span> has been part of my life much
+            longer than my formal ML journey. I started using it back in <span class="grayscale-bold">2018</span>,
+            initially as a creative tool—building apps with Kivy/KivyMD, creating Telegram bots,
+            automating daily tasks, and experimenting with web scraping. That early experimentation
+            shaped how I approach machine learning today: practical first, theory where it matters,
+            and always focused on solving real problems.
+        </p>
+
+        <p>
+            Outside of tech, I value self-discipline and self-expression just as much. I train in
+            <span class="grayscale-bold">calisthenics</span>, learning through experimentation and
+            consistency rather than shortcuts. I also enjoy sketching, and I run a sketching page
+            called <span class="grayscale-bold">“sptrop”</span>, where drawing helps me slow down,
+            observe, and think visually—skills that surprisingly carry over into how I approach
+            data and models.
+        </p>
+
+        <p>
+            At the core of everything I do is a clear personal goal: to build a life that allows
+            me to give my family comfort, security, and freedom, while also pursuing my own passions.
+            One of those dreams is owning an <span class="grayscale-bold">ADV motorcycle</span>—not
+            just to ride, but to truly understand. I want to be capable enough to repair, maintain,
+            and trust my machine, travel across India first, and then explore other countries.
+        </p>
+
+        <p>
+            For me, that mindset—understanding systems deeply instead of just using them—applies
+            equally to bikes, bodies, art, and machine learning.
+        </p>
+
+        <p class="about-closing">
+            Right now, I’m focused on growing as a machine learning practitioner—learning
+            continuously, building consistently, and aiming for roles where ML is applied
+            thoughtfully, not blindly. I’m not chasing shortcuts. I’m building capability,
+            one layer at a time.
+        </p>
+
+        <div class="social-links">
+            <a href="https://www.instagram.com/sptrop/" target="_blank" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/kalyantoppo/" target="_blank" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a href="https://github.com/KToppo" target="_blank" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://sptrop.blogspot.com/" target="_blank" aria-label="Blog">
+                <i class="fa-solid fa-pen-nib"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+</div>
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <div class="footer-left">
+            <p class="footer-name">
+                © 2025 Kalyan Toppo
+            </p>
+        </div>
+
+        <div class="footer-center">
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/kalyantoppo/"
+                   target="_blank"
+                   aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://www.instagram.com/sptrop/"
+                   target="_blank"
+                   aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="mailto:kalyan.toppo.2021@gmail.com"
+                   aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+                <a href="https://github.com/KToppo"
+                   target="_blank"
+                   aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <button class="back-to-top" aria-label="Back to top">
+                ↑ Top
+            </button>
+        </div>
+
+    </div>
+</footer>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spam Detection System | Kalyan Toppo</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="page-wrapper">
+
+<div class="page-content">
+
+<header class="navbar">
+    <h2 class="logo">KT</h2>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+        ☰
+    </button>
+    <nav class="nav-links">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('projects') }}">Projects</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+</header>
+
+<section class="about about-page animate">
+    <div class="about-container">
+
+        <h1>Spam Detection System</h1>
+
+        <p class="about-intro">
+            Learning how machines understand text — not by magic, but by careful design.
+        </p>
+
+        <p>
+            After working on recommendation systems, a new question started bothering me:
+            <em>How does raw text actually become something a machine can reason about?</em>
+        </p>
+
+        <p>
+            This curiosity led me to my third machine learning project —
+            a <span class="grayscale-bold">Spam Detection System</span> for Email and SMS messages.
+            The goal wasn’t just classification, but understanding how
+            <span class="grayscale-bold">text preprocessing, feature extraction,
+            and model choice</span> directly influence predictions.
+        </p>
+
+        <!-- Project Image -->
+        <div class="project-image">
+            <img src="{{ url_for('static', filename='assets/projects/spam_classifier.png') }}"
+                 alt="Spam Detection System Interface">
+            <p class="image-caption">
+                End-to-end spam detection pipeline — from raw text input to prediction.
+            </p>
+        </div>
+
+        <hr class="section-divider">
+
+        <h2>Building the NLP Pipeline</h2>
+
+        <p>
+            I started from raw, unstructured messages — messy, noisy, and inconsistent —
+            and built a complete NLP pipeline from scratch. This included:
+        </p>
+
+        <ul class="project-list">
+            <li>Text cleaning and normalization</li>
+            <li>Tokenization and stopword removal</li>
+            <li>Stemming to reduce vocabulary size</li>
+            <li>Transforming text into numerical form using <span class="grayscale-bold">TF-IDF</span></li>
+        </ul>
+
+        <p>
+            This phase reinforced an important lesson:
+            <span class="grayscale-bold">in NLP, preprocessing often matters more than the model itself</span>.
+        </p>
+
+        <hr class="section-divider">
+
+        <h2>Model Exploration and Decision-Making</h2>
+
+        <p>
+            Instead of locking myself into a single algorithm, I experimented with multiple models,
+            including <span class="grayscale-bold">Naive Bayes, Logistic Regression,
+            SVM, Random Forest, and XGBoost</span>.
+        </p>
+
+        <p>
+            What stood out quickly was that accuracy alone was misleading —
+            especially for spam detection, where <span class="grayscale-bold">false positives matter
+            more than raw correctness</span>.
+        </p>
+
+        <p>
+            Based on <span class="grayscale-bold">precision</span> and real-world relevance,
+            I finalized <span class="grayscale-bold">TF-IDF with Multinomial Naive Bayes</span>
+            as the most reliable model. This decision wasn’t theoretical —
+            it came from observing how different models behaved on imbalanced text data.
+        </p>
+
+        <hr class="section-divider">
+
+        <h2>From Model to Usable System</h2>
+
+        <p>
+            To complete the system end-to-end, I deployed the trained model using a
+            <span class="grayscale-bold">Streamlit web application</span>,
+            allowing users to input any message and instantly see whether it’s
+            classified as spam or not.
+        </p>
+
+        <p>
+            This reinforced a simple but important principle for me:
+            <strong>a model isn’t useful until someone can interact with it.</strong>
+        </p>
+
+        <hr class="section-divider">
+
+        <h2>What This Project Taught Me</h2>
+
+        <ul class="project-list">
+            <li>How machines interpret language through vectorization</li>
+            <li>Why preprocessing decisions compound downstream performance</li>
+            <li>How to compare models beyond surface-level metrics</li>
+            <li>The complete lifecycle of an NLP project — from raw text to deployment</li>
+        </ul>
+
+        <p class="about-closing">
+            This project marked a shift in how I approach machine learning.
+            I stopped treating it as “apply an algorithm” and started seeing it as
+            <span class="grayscale-bold">designing a pipeline where every decision compounds</span>.
+        </p>
+
+        <a href="https://github.com/KToppo/Projects/tree/master/spam_classifier"
+           target="_blank"
+           class="about-btn">
+            View Project on GitHub →
+        </a>
+
+    </div>
+</section>
+
+</div>
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <div class="footer-left">
+            <p class="footer-name">
+                © 2025 Kalyan Toppo
+            </p>
+        </div>
+
+        <div class="footer-center">
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/kalyantoppo/"
+                   target="_blank"
+                   aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://www.instagram.com/sptrop/"
+                   target="_blank"
+                   aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="mailto:kalyan.toppo.2021@gmail.com"
+                   aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+                <a href="https://github.com/KToppo"
+                   target="_blank"
+                   aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <button class="back-to-top" aria-label="Back to top">
+                ↑ Top
+            </button>
+        </div>
+
+    </div>
+</footer>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

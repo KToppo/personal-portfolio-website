@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emotion Detection (Classical ML) | Kalyan Toppo</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="page-wrapper">
+
+<div class="page-content">
+
+<header class="navbar">
+    <h2 class="logo">KT</h2>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+        ☰
+    </button>
+    <nav class="nav-links">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('projects') }}">Projects</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+</header>
+
+<section class="about about-page animate">
+    <div class="about-container">
+
+        <h1>Emotion Detection Without Deep Learning</h1>
+
+        <p class="about-intro">
+            <strong>A deliberate constraint project.</strong>
+        </p>
+
+        <p>
+            Most emotion detection systems today rely on deep learning by default.
+            <span class="grayscale-bold">I deliberately chose not to.</span>
+        </p>
+
+        <p>
+            This project started as a final assessment during my Data Science program at
+            <span class="grayscale-bold">IT-Vedant</span>, but very quickly turned into a personal challenge:
+            <em>Can a facial emotion detection system be built using only classical machine learning —
+            and still work in real-world conditions?</em>
+        </p>
+
+        <p>
+            Instead of taking the obvious CNN route, I restricted myself to traditional ML models
+            to deeply understand <span class="grayscale-bold">feature extraction, data imbalance,
+            model behavior, and ensemble decision-making</span>.
+        </p>
+
+        <hr class="section-divider">
+
+        <h2>The Core Problem (and Why It Was Non-Trivial)</h2>
+
+
+        <div class="project-image">
+            <img src="{{ url_for('static', filename='assets/projects/emotion_detection.png') }}"
+                alt="Emotion Detection System Output">
+            <p class="image-caption">
+                Real-time facial emotion detection using classical machine learning
+                and ensemble decision-making.
+            </p>
+        </div>
+
+
+
+
+        <p>
+            Emotion datasets are inherently imbalanced. Some emotions dominate, others barely exist.
+            Training a classifier naively gives high overall accuracy but completely fails minority
+            emotions — which defeats the entire purpose.
+        </p>
+
+        <p>I experimented with:</p>
+
+        <ul class="project-list">
+            <li>
+                <span class="grayscale-bold">SMOTE</span> — Balanced class distribution,
+                but weak real-world performance.
+            </li>
+            <li>
+                <span class="grayscale-bold">SMOTEENN</span> — Better overall scores,
+                but unstable class-wise predictions.
+            </li>
+        </ul>
+
+        <p>
+            Neither approach alone was acceptable.
+            That’s when I stopped chasing a single “best model” and shifted to
+            <span class="grayscale-bold">model behavior analysis</span>.
+        </p>
+
+        <hr class="section-divider">
+
+        <h2>My Solution: Stacking Based on Failure Patterns</h2>
+
+        <p>
+            Instead of forcing one algorithm to do everything, I trained
+            <span class="grayscale-bold">five different classical ML models</span>
+            using:
+        </p>
+
+        <ul class="project-list">
+            <li>Different resampling strategies</li>
+            <li>Balanced vs weighted <code>class_weight</code> configurations</li>
+            <li>Models with distinct strengths across emotion classes</li>
+        </ul>
+
+        <p>
+            Each model failed differently — <span class="grayscale-bold">and that was the insight</span>.
+        </p>
+
+        <p>
+            I stacked these models using:
+        </p>
+
+        <ul class="project-list">
+            <li>Majority voting</li>
+            <li>Probability aggregation</li>
+        </ul>
+
+        <p>
+            This ensemble approach significantly improved robustness across emotions,
+            even when individual models struggled.
+            <strong>This was not accidental performance — it was engineered diversity.</strong>
+        </p>
+
+        <hr class="section-divider">
+
+        <h2>Real-World Accuracy: Closing the Face Detection Gap</h2>
+
+        <p>
+            Another major issue surfaced during testing.
+            The training dataset contained already cropped faces — real images do not.
+        </p>
+
+        <p>To close this gap:</p>
+
+        <ul class="project-list">
+            <li>
+                Used the same <span class="grayscale-bold">Haar Cascade face detection</span>
+                model used by the dataset creator
+            </li>
+            <li>Implemented face detection and cropping during inference</li>
+            <li>Ensured consistency between training and prediction pipelines</li>
+        </ul>
+
+        <p>
+            This significantly improved real-world usability.
+            That said, I documented limitations intentionally:
+        </p>
+
+        <ul class="project-list">
+            <li>Extremely close or poorly framed faces can fail detection</li>
+            <li>Some misclassification occurs due to bounding box distortion</li>
+        </ul>
+
+        <p>
+            Hiding these would have been dishonest.
+        </p>
+
+        <hr class="section-divider">
+
+        <h2>What This Project Actually Demonstrates</h2>
+
+        <ul class="project-list">
+            <li>Practical handling of imbalanced classification problems</li>
+            <li>When and why resampling techniques fail</li>
+            <li>How ensemble learning compensates for individual model weaknesses</li>
+            <li>The importance of data pipeline consistency</li>
+            <li>Trade-offs between accuracy, interpretability, and robustness</li>
+        </ul>
+
+        <p>
+            Most importantly, it demonstrates
+            <span class="grayscale-bold">decision-making under constraints</span>,
+            not blind algorithm usage.
+        </p>
+
+        <hr class="section-divider">
+
+        <h2>Why I’m Proud of This Project</h2>
+
+        <p>
+            Not because it’s perfect — it isn’t.
+            But because every design choice was <span class="grayscale-bold">intentional,
+            tested, and justified</span>.
+        </p>
+
+        <p class="about-closing">
+            I don’t blindly follow trends.  
+            I analyze failure before optimizing success.  
+            I care about real-world behavior, not just leaderboard scores.
+        </p>
+
+        <a href="https://github.com/KToppo/Emotion-Detection-ML"
+           target="_blank"
+           class="about-btn">
+            View Project on GitHub →
+        </a>
+
+    </div>
+</section>
+
+</div>
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <div class="footer-left">
+            <p class="footer-name">
+                © 2025 Kalyan Toppo
+            </p>
+        </div>
+
+        <div class="footer-center">
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/kalyantoppo/"
+                   target="_blank"
+                   aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://www.instagram.com/sptrop/"
+                   target="_blank"
+                   aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="mailto:kalyan.toppo.2021@gmail.com"
+                   aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+                <a href="https://github.com/KToppo"
+                   target="_blank"
+                   aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <button class="back-to-top" aria-label="Back to top">
+                ↑ Top
+            </button>
+        </div>
+
+    </div>
+</footer>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
