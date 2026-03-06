@@ -731,13 +731,36 @@ html, body {
 .career-page {
     padding-top: 90px; /* navbar spacing */
 }
+/* Career page navbar alignment */
+.career-page .navbar {
+    padding: 20px 0;
+}
+
+.career-page .navbar .logo,
+.career-page .navbar nav {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.career-page .navbar {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+.career-page .timeline {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
 
 
 /* Hero */
 
 .career-hero {
     text-align: center;
-    padding: 100px 20px 60px;
+    min-height: 40vh;
+    padding: 120px 20px 80px;
     background: linear-gradient(180deg,#020617,#0f172a);
 }
 
@@ -807,6 +830,17 @@ html, body {
     transform: translateY(0);
 }
 
+.timeline-item.left .content {
+  transform: translateX(-40px);
+}
+
+.timeline-item.right .content {
+  transform: translateX(40px);
+}
+
+.timeline-item .content.show {
+  transform: translateX(0);
+}
 
 /* Date */
 
@@ -850,6 +884,24 @@ html, body {
 
 .read-more:hover {
     text-decoration: underline;
+}
+
+
+.timeline-item {
+    padding: 40px 50px;
+}
+.timeline::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+.career-page .career-hero-content,
+.career-page .timeline {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.career-hero-content {
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 

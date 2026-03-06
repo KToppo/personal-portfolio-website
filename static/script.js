@@ -103,22 +103,25 @@ if (navToggle && navLinks) {
 
 const items = document.querySelectorAll('.timeline-item .content');
 
-function revealOnScroll(){
+function revealOnScroll() {
 
-const trigger = window.innerHeight * 0.85;
+  const trigger = window.innerHeight * 0.85;
 
-items.forEach(item => {
+  items.forEach(item => {
 
-const top = item.getBoundingClientRect().top;
+    const top = item.getBoundingClientRect().top;
 
-if(top < trigger){
-item.classList.add("show");
+    if (top < trigger) {
+      item.classList.add('show');
+    } else {
+      item.classList.remove('show');
+    }
+
+  });
+
 }
 
+window.addEventListener("scroll", () => {
+  requestAnimationFrame(revealOnScroll);
 });
-
-}
-
-window.addEventListener("scroll", revealOnScroll);
-
-window.addEventListener("load", revealOnScroll);
+window.addEventListener('load', revealOnScroll);
