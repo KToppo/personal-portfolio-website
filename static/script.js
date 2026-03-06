@@ -96,3 +96,29 @@ if (navToggle && navLinks) {
         navLinks.classList.toggle("active");
     });
 }
+
+/* ===============================
+   Career Page
+================================ */
+
+const items = document.querySelectorAll('.timeline-item .content');
+
+function revealOnScroll(){
+
+const trigger = window.innerHeight * 0.85;
+
+items.forEach(item => {
+
+const top = item.getBoundingClientRect().top;
+
+if(top < trigger){
+item.classList.add("show");
+}
+
+});
+
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+window.addEventListener("load", revealOnScroll);
