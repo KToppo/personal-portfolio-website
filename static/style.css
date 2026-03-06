@@ -728,9 +728,7 @@ html, body {
    Career Page
 ================================ */
 
-.career-page {
-    padding-top: 90px; /* navbar spacing */
-}
+
 /* Career page navbar alignment */
 .career-page .navbar {
     padding: 20px 0;
