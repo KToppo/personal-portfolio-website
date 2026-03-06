@@ -889,7 +889,7 @@ html, body {
 
 .timeline-item {
     width: 100%;
-    padding-left: 50px;
+    padding-left: 20px;
     padding-right: 20px;
 }
 
@@ -900,7 +900,8 @@ html, body {
 }
 
 .timeline-item::after {
-    left: 6px;
+    left: 12px;
+    transform: translateX(-50%);
 }
 
 }
