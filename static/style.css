@@ -884,8 +884,7 @@ html, body {
 @media (max-width:768px) {
 
 .timeline::after {
-    left: 12px;
-    transform: translateX(-50%);
+    left: 6px;
 }
 
 .timeline-item {
@@ -901,8 +900,7 @@ html, body {
 }
 
 .timeline-item::after {
-    left: 12px;
-    transform: translateX(-50%);
+    left: 6px;
 }
 
 }
