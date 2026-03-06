@@ -734,7 +734,7 @@ html, body {
 .career-hero {
     text-align: center;
     min-height: 40vh;
-    padding: 120px 20px 80px;
+    padding: 120px 20px 40px;
     background: linear-gradient(180deg,#020617,#0f172a);
 }
 
@@ -884,12 +884,13 @@ html, body {
 @media (max-width:768px) {
 
 .timeline::after {
-    left: 10px;
+    left: 12px;
 }
 
 .timeline-item {
     width: 100%;
-    padding-left: 40px;
+    padding-left: 50px;
+    padding-right: 20px;
 }
 
 .timeline-item.left,
@@ -899,7 +900,8 @@ html, body {
 }
 
 .timeline-item::after {
-    left: 2px;
+    left: 12px;
+    transform: translateX(-50%);
 }
 
 }
