@@ -885,6 +885,7 @@ html, body {
 
 .timeline::after {
     left: 12px;
+    transform: translateX(-50%);
 }
 
 .timeline-item {
